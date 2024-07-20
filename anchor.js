@@ -1,9 +1,6 @@
 var anchor = (function() {
   var anchor = {
-    wait: function(item, function_, listener) {
-      var listener_ = listener ? listener : "load";
-      item.addEventListener(listener_, function_);
-    },
+    wait:function(item,function_,listener){item.addEventListener(listener?listener:"load",function_)},
     Entity: function(x, y, z, shown) {
       if (x && y && z) {
         this.x = x;
